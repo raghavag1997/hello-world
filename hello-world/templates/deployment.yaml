@@ -14,3 +14,7 @@ spec:
     metadata:
       labels:
         app: hello-world
+    spec:
+      containers:
+      - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        name: helloworld-container
